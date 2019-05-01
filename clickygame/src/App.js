@@ -5,7 +5,10 @@ import ClickBox from "./components/ClickBox";
 import Navbar from "./components/Navbar";
 import characters from "./characters.json";
  
-
+// class App extends Component {
+//   state = {
+//     isClicked: false;
+//   };
 //on click, if isClicked is false then add 1 to score and shuffle
           //if isClicked is true, reset Game
 
