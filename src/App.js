@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './styles/App.css';
 import Header from "./components/Header";
 import ClickBox from "./components/ClickBox";
@@ -9,13 +9,21 @@ import characters from "./characters.json";
 //on click, if isClicked is false then add 1 to score and shuffle
           //if isClicked is true, reset Game
 
-function shuffle(array) {
+class App extends Component {
+
+    state = {
+      characters : characters
+    };
+  
+
+
+ shuffle(array) {
   var shuffled = array.sort(() => Math.random() - 0.5);
   return shuffled;
 }
 
 
-function updateIsClicked() {
+ updateIsClicked() {
   // Note: this will *not* work as intended.
   //this.setState({isClicked: true});
   if(2===2){
@@ -45,108 +53,36 @@ handleSomething() {
 }
 */
 
-var randomized = shuffle(characters);
-console.log({randomized});
+// var randomized = shuffle(characters);
+// console.log({randomized});
 
-function resetGame(){
+ resetGame(){
   //resetScore() (need to build this function)
   //setTopScore() (need to build this function)
-  shuffle(characters);
+  this.shuffle(characters);
 }
 
-function createBox(){
-{/* mapping each character into each box */}
-
-}
-
-function App() {
+render() {
   return (
     <div>
       <Navbar/>
       <Header/>
       <div className="jumbotron">
         <div className="row">
-        {/* add a map function to insert the images into each box */}
-          <div className="col-3">
+        {this.state.characters.map((character,index)=>{
+           return (<div className="col-3">
             <ClickBox 
-              name={randomized[0].name}
-              image={randomized[0].image}
+              name={character.name}
+              image={character.image}
+              key={index}
             />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[1].name}
-              image={randomized[1].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[2].name}
-              image={randomized[2].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[3].name}
-              image={randomized[3].image}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[4].name}
-              image={randomized[4].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[5].name}
-              image={randomized[5].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[6].name}
-              image={randomized[6].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[7].name}
-              image={randomized[7].image}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[8].name}
-              image={randomized[8].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[9].name}
-              image={randomized[9].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[10].name}
-              image={randomized[10].image}
-            />
-          </div>
-          <div className="col-3">
-            <ClickBox 
-              name={randomized[11].name}
-              image={randomized[11].image}
-            />
-          </div>
+          </div>)
+        })}
         </div>
       </div>
     </div>
   );
+}
 }
 
 export default App;
