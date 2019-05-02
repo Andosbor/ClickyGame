@@ -9,26 +9,28 @@ import characters from "./characters.json";
 //on click, if isClicked is false then add 1 to score and shuffle
           //if isClicked is true, reset Game
 
+
 class App extends Component {
 
     state = {
-      characters : characters
+      characters : characters,
+      index: characters.index
     };
-  
 
+    
 
  shuffle(array) {
   var shuffled = array.sort(() => Math.random() - 0.5);
+  console.log("shuffling");
   return shuffled;
 }
-
 
  updateIsClicked() {
   // Note: this will *not* work as intended.
   //this.setState({isClicked: true});
-  if(2===2){
+  
     console.log(this.props.name)
-  }
+  
 }
 
 /*
@@ -61,6 +63,7 @@ handleSomething() {
   //setTopScore() (need to build this function)
   this.shuffle(characters);
 }
+//must add an index to each image
 
 render() {
   return (
@@ -71,10 +74,10 @@ render() {
         <div className="row">
         {this.state.characters.map((character,index)=>{
            return (<div className="col-3">
-            <ClickBox 
+            <ClickBox onClick={this.shuffle(characters)}test={console.log(character.index)}
               name={character.name}
               image={character.image}
-              key={index}
+              key={character.index}
             />
           </div>)
         })}

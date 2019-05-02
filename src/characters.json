@@ -2,61 +2,73 @@
     {
       "name": "garfield",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/garfield-icon-30150737_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 1
     },
     {
       "name":"jon",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/jon-q-arbuckle-icon-30151155_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 2
     },
     {
       "name":"odie",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/odie-icon-30150759_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 3
     },
     {
       "name":"arlene",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/arlene-icon-30151228_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 4
     },
     {
       "name":"dad",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/dad-icon-30151311_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 5
     },
     {
       "name":"doc-boy",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/doc-boy-icon-30151332_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 6
     },
     {
       "name":"dr-liz-wilson",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/dr-liz-wilson-icon-30151209_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 7
     },
     {
       "name":"irma",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/irma-icon-30151422_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 8
     },
     {
       "name":"lyman",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/lyman-icon-30151351_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 9
     },
     {
       "name":"mom",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/mom-icon-30151254_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 10
     },
     {
       "name":"nermal",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/nermal-icon-30151242_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 11
     },
     {
       "name":"pooky",
       "image": "https://d1ejxu6vysztl5.cloudfront.net/characters/pooky-icon-30151139_200x200.jpg",
-      "isClicked": false
+      "isClicked": false,
+      "index": 12
     }
   ]
